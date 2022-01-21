@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %}We've got a new access request for observer!{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="padding: 20px 30px 0px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+		<p style="margin: 0;">We've just received a new access request for an Observer.</p>
+		<p><strong>Name: </strong>{{name}}</p>
+		<p><strong>Email: </strong><a href="mailto:{{email}}" style="color: #111111; font-weight: 700;">{{email}}</a></p>
+	</td>
+</tr>
+{% endblock %}

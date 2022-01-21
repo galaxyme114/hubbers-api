@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block title %}NEW CONTESTANT APPLICATION{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+		<p style="margin: 0;">Please note that a new contestant is registered with following details:</p>
+	</td>
+</tr>
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="padding: 0px 30px 0px 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+		<p style="margin: 0;">Name: {{contestantFullName}}</p>
+		<p style="margin: 0;">Contest: {{contestName}}</p>
+	</td>
+</tr>
+<!-- COPY -->
+<!-- BULLETPROOF BUTTON -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="border-left: 1px solid #eee; border-right: 1px solid #eee;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td align="center" style="border-radius: 3px;" bgcolor="#75AC2A">
+								<a href="https://new-admin.hubbers.io/contestant-application" target="_blank"
+								   style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #75AC2A; display: inline-block;">GO TO CONTEST</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+{% endblock %}

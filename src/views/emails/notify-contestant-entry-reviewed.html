@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block title %}ENTRY REVIEWED!{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+    <td bgcolor="#ffffff" align="left"
+        style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+        <p>Dear {{name}}!</p>
+        <p>Your contest entry has been reviewed by a Hubbers judge!</p>
+        <p></p>
+        <br/>
+        <p>Contest: <strong>{{contest.name}}</strong></p>
+        <p>Judge: {{judgeName}}</p>
+        <p></p>
+        <p>Overall rating: {{overAllRatingAverage}}/10</p>
+        <p>Design: {{ratingInfo.design}}/10<p>
+        <p>Functionality: {{ratingInfo.functionality}}/10<p>
+        <p>Usability: {{ratingInfo.usability}}/10<p>
+        <p>Market Potential: {{ratingInfo.marketPotential}}/10<p>
+    </td>
+</tr>
+<!-- BULLETPROOF BUTTON -->
+<tr>
+    <td bgcolor="#ffffff" align="left"
+        style="border-left: 1px solid #eee; border-right: 1px solid #eee;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="center" style="border-radius: 3px;" bgcolor="#75AC2A">
+                                <a href="https://hubbers.io/contests/{{contestShortId}}/{{contestSlug}}" target="_blank"
+                                   style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #75AC2A; display: inline-block;">GO TO CONTEST</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endblock %}

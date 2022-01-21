@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block title %}Contest New Entry NOTIFICATION!{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+    <td bgcolor="#ffffff" align="left"
+        style="padding: 20px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+        <p>Hi {{ name }}! </p>
+        <p></p>
+        {% if totalContestant == 1 %}
+        <p style="margin: 0;">There is 1 contestant waiting to receive your feedback for the {{ contestName }} contest.</p>
+        {% else %}
+        <p style="margin: 0;">There are {{ totalContestant }} contestants waiting to receive your feedback for the {{ contestName }} contest.</p>
+        {% endif %}
+    </td>
+</tr>
+<tr>
+    <td bgcolor="#ffffff" align="center"
+        style="width:20%;padding: 5px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+        {% for contestant in contestants %}
+        <div style="text-align: center; width: 33.33333%; display: inline-block;">
+            <div style="">
+                <img style="border-radius: 50%; width: 80px; height: 80px;" src="{{contestant.thumbnail_image_url}}">
+            </div>
+            <p>{{ contestant.name }}</p>
+        </div>
+        {% endfor %}
+    </td>
+</tr>
+<tr>
+    <td bgcolor="#ffffff" align="left"
+        style="border-left: 1px solid #eee; border-right: 1px solid #eee;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="center" style="border-radius: 3px;" bgcolor="#75AC2A">
+                                <a href="https://hubbers.io/contests/{{contestShortId}}/{{contestSlug}}" target="_blank"
+                                   style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #75AC2A; display: inline-block;">GO TO CONTEST</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endblock %}

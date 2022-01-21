@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block title %}WELCOME OUR NEW<br>OBSERVER!{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+		<p style="margin: 0; color: #353434">Dear {{name}}!</p>
+		<p></p>
+		<p style="margin: 0; color: #353434">We are excited to announce that the Hubbers Observers & Investors Group is growing!</p>
+		<p></p>
+		<p style="margin: 0; color: #353434">A warm welcome to {{ observerName }}</p>
+		<br/>
+		<p align="center" style="">
+			<img src="{{ observerThumbnailImageUrl }}" width="100" height="100" style="width: 100px; height: 100px; border-radius: 50%;"/>
+		</p>
+		<p align="center" style="">
+			<strong>{{ observerName }}</strong>
+			<br/>
+			<span>{{ observerNationality }}</span>
+		</p>
+	</td>
+</tr>
+{% endblock %}

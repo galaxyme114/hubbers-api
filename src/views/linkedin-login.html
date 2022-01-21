@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>Login with Linkedin | Hubbers - Hub of Makers</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<style type="text/css">
+		/* CLIENT-SPECIFIC STYLES */
+		body, table, td, a {
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+		}
+
+		/* RESET STYLES */
+		img {
+			border: 0;
+			height: auto;
+			line-height: 100%;
+			outline: none;
+			text-decoration: none;
+		}
+
+		body {
+			height: 100% !important;
+			margin: 0 !important;
+			padding: 0 !important;
+			width: 100% !important;
+		}
+
+		/* iOS BLUE LINKS */
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		/* MOBILE STYLES */
+		@media screen and (max-width: 600px) {
+			h1 {
+				font-size: 32px !important;
+				line-height: 32px !important;
+			}
+		}
+
+		/* ANDROID CENTER FIX */
+		div[style*="margin: 16px 0;"] {
+			margin: 0 !important;
+		}
+
+		.linkedin-login-placeholder {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+			text-align: center;
+		}
+
+		.linkedin-login-placeholder__title {
+			font-size: 3rem;
+			font-weight: bold;
+			color: #75AC2A;
+			margin-bottom: 1rem;
+		}
+
+		.linkedin-login-placeholder__subtitle {
+			font-size: 1.25rem;
+			color: #5d5f62;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+
+<body>
+<div class="linkedin-login-placeholder">
+	<div class="container">
+		<div class="linkedin-login-placeholder__title">Signing in ...</div>
+		<div class="linkedin-login-placeholder__subtitle">Please wait patiently while we sign you in.</div>
+	</div>
+</div>
+
+<script>
+	window.opener.postMessage({ type: 'linkedin', token: '{{token}}' }, '*')
+</script>
+</body>
+</html>

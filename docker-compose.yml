@@ -1,0 +1,38 @@
+version: '3.1'
+
+services:
+
+  web:
+    build: .
+    ports:
+      - ${PORT}:${WEB_PORT}
+    depends_on:
+      - redis
+      - mongo
+    links:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+    container_name: hubbers-api
+
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    volumes:
+      - redis:/data
+    container_name: hubbers-api-redis
+
+  mongo:
+    image: mongo
+    volumes:
+      - mongo:/data/db
+    ports:
+      - 27017:27017
+    container_name: hubbers-db
+    stdin_open: true
+    tty: true
+
+volumes:
+  redis:
+  mongo:

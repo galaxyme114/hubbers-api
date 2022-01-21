@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block title %}CONGRATULATIONS!{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+    <td bgcolor="#ffffff" align="left"
+        style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+        <p>Hi {{contestantFullName}}!</p>
+        <p></p>
+        <p>Your application as a contestant has been approved!</p>
+        <p>We recommend you to review the feedback from Hubbe.rs award jury. They are experienced in your field and help you to get the best and most out of your project.</p>
+        <p>You can also read our tips for contestants <a style="color:#75AC2A" target="_blank" href="https://hubbers.io/tips-for-contestants">here</a>.</p>
+    </td>
+</tr>
+<!-- COPY -->
+<tr>
+    <td bgcolor="#ffffff" align="left"
+        style="border-left: 1px solid #eee; border-right: 1px solid #eee;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="center" style="border-radius: 3px;" bgcolor="#75AC2A">
+                                <a href="https://hubbers.io/contests/{{shortId}}/{{slug}}" target="_blank"
+                                   style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #75AC2A; display: inline-block;">GO TO CONTEST</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endblock %}
